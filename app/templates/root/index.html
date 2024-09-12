@@ -5,5 +5,21 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Welcome At nikonekti customer services</h1>
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center">Support</h1>
+        <p class="text-lg text-gray-700 text-center">Need help? We're here for you.</p>
+      
+        <div class="mt-8">
+          <h2 class="text-2xl font-bold">Support Categories</h2>
+          <ul class="list-disc space-y-2">
+            <li><a href="{{ url_for('index.support')}}" class="text-blue-500 hover:text-blue-700">Account Issues</a></li>
+            </ul>
+      
+          <h2 class="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          </div>
+      
+        <h2 class="text-2xl font-bold mt-8">Contact Us</h2>
+        <p class="text-gray-700">Phone: +1234567890</p>
+        <p class="text-gray-700">Email: support@nikonekti.com</p>
+      </div>
 {% endblock %}
