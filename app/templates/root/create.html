@@ -4,31 +4,73 @@
 {% endblock %}
 
 {% block content %}
-<div class="container mx-auto px-4 py-8">   
+<div class="bg-cream-100 font-sans antialiased">
+<div class="container mx-auto px-4 py-16">
+    <!-- WhatsApp Catalog Section -->
+    <section class="flex flex-col md:flex-row items-center justify-between">
+      <!-- Left Side Text -->
+      <div class="md:w-1/2 text-left space-y-6">
+        <h2 class="text-3xl font-bold text-blue-600">Create Your Account</h2>
+        <ul class="space-y-4">
+            <li class="relative pl-6">
+                <span class="absolute left-0 top-0 h-full w-1 bg-blue-500"></span>
+                open the link
+            </li>
+            <li class="relative pl-6">
+                <span class="absolute left-0 top-0 h-full w-1 bg-blue-500"></span>
+                click on log in button on the top right corner
+            </li>
+            <li class="relative pl-6">
+                <span class="absolute left-0 top-0 h-full w-1 bg-blue-500"></span>
+                proceed with filling your credentials 
+            </li>
+            <li class="relative pl-6">
+                <span class="absolute left-0 top-0 h-full w-1 bg-blue-500"></span>
+                proceed and enjoy Nikonekti services
+            </li>
+        </ul>
+    
+      </div>
+      
+      <!-- Right Side Image -->
+      <div class="md:w-1/4 mt-8 md:mt-0">
+        <img src="/static/img/login.png" alt="WhatsApp Store" class="mx-auto shadow-lg rounded-lg">
+      </div>
+    </section>
+    <section class="mt-16 flex flex-col md:flex-row items-center justify-between">
+        
+        <div class="md:w-1/4 mt-8 md:mt-0 ">
+          <img src="/static/img/welcome.png" alt="WhatsApp Payments" class="mx-auto shadow-lg rounded-lg">
+        </div>
+  
+        
+        <div class="md:w-1/2 text-left space-y-6">
+          <h2 class="text-3xl font-bold text-blue-600">sign up and log in procedures</h2>
+          <ul class="space-y-4">
+            <li class="relative pl-6">
+                <span class="absolute left-0 top-0 h-full w-1 bg-blue-500"></span>
+                fill in your email
+            </li>
+            <li class="relative pl-6">
+                <span class="absolute left-0 top-0 h-full w-1 bg-blue-500"></span>
+                create your password
+            </li>
+            <li class="relative pl-6">
+                <span class="absolute left-0 top-0 h-full w-1 bg-blue-500"></span>
+                or just simply sign in with google
+            </li>
+            <li class="relative pl-6">
+                <span class="absolute left-0 top-0 h-full w-1 bg-blue-500"></span>
+                click on the sign in button at the bottom
+            </li>
+        </ul>
+    
+        </div>
+      </section>
+    </div>
+  
+    <button class="bg-blue-300 hover:bg-blue-200 text-white px-2 py-1 rounded-lg ml-5">
+      <a href="{{ url_for('index.index_root')}}" class="text-white">Done</a>
+  </button>
 
-    <h1 class="text-3xl font-bold text-center">How   
-to Create an Account</h1>
-    <p class="text-lg text-gray-700 text-center mb-8">Follow these simple steps to create your account:</p>
-
-    <ol class="list-decimal space-y-4">
-        <li class="text-gray-700">
-            <h3 class="text-xl font-bold mb-2">Step 1: Visit Our Website</h3>
-            <p>Go to nikonekti.vercel.app/ and click on the "Get Started" button.</p>
-        </li>
-        <li class="text-gray-700">
-            <h3 class="text-xl font-bold mb-2">Step 2: Fill in your credentials</h3>
-            <p>Fill in the required fields, including your email address, password, and any other requested information.
-                <br>Or you can just continue with google.
-            </p>
-        </li>
-        <li class="text-gray-700">
-            <h3 class="text-xl font-bold mb-2">Step 3: Verify Your Email</h3>
-            <p>Check your email inbox for a verification link and click on it to confirm your account.</p>
-        </li>
-        <li class="text-gray-700">
-            <h3 class="text-xl font-bold mb-2">Step 4: Log In</h3>
-            <p>Once your email is verified, you can log in to your account and start using our app.</p>
-        </li>
-    </ol>
-</div>
 {% endblock %}

@@ -1,4 +1,5 @@
 from flask import Flask
+from pymongo import MongoClient
 
 def create_app():
     # Creating flask app instance
@@ -11,3 +12,7 @@ def create_app():
     app.register_blueprint(index.bp)
 
     return app
+
+def get_db():
+    client = MongoClient('mongodb://localhost:27017/')
+    return client.customer_service_db

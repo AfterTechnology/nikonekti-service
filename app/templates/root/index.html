@@ -5,21 +5,51 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center">Support</h1>
-        <p class="text-lg text-gray-700 text-center">Need help? We're here for you.</p>
-      
-        <div class="mt-8">
-          <h2 class="text-2xl font-bold">Support Categories</h2>
-          <ul class="list-disc space-y-2">
-            <li><a href="{{ url_for('index.support')}}" class="text-blue-500 hover:text-blue-700">Account Issues</a></li>
-            </ul>
-      
-          <h2 class="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
-          </div>
-      
-        <h2 class="text-2xl font-bold mt-8">Contact Us</h2>
-        <p class="text-gray-700">Phone: +1234567890</p>
-        <p class="text-gray-700">Email: support@nikonekti.com</p>
-      </div>
+
+<div class="container mx-auto px-4 py-8 bg-blue-300 rounded-3xl">
+        <h1 class="text-4xl font-bold text-center mb-8">SUPPORT</h1>
+        <p class="text-lg text-black text-center mb-12">Need help? We're here for you.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-blue-700 rounded-3xl p-6">
+                <h2 class="text-xl font-bold mb-4">Support Categories</h2>
+                <li class="text-gray-300">creating account</li>
+                <li class="text-gray-300">Account issues</li>
+                <p class="text-gray-300">pick any category below</p>
+                
+            </div>
+            <div class="bg-blue-700 rounded-3xl p-6">
+                <h2 class="text-xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-300">Come and take a look on  what others are facing</p>
+              
+                <button class="bg-blue-300 hover:bg-blue-200 text-white px-2 py-1 rounded-lg">
+                    <a href="{{ url_for('index.frequent')}}" class="text-white">check out →</a>
+                </button>
+            </div>
+            <div class="bg-blue-700 rounded-3xl p-6">
+                <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+                <p class="text-gray-300">Phone: +255763848561</p>
+                <p class="text-gray-300">Email: support@nikonekti.com</p>
+                <a href="#" class="text-blue-500 hover:text-blue-300 mt-4">→</a>
+            </div>
+        </div>
+</div>
+<div class="container mx-auto px-4 py-8 bg-blue-300 rounded-3xl mt-5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-blue-700 rounded-3xl p-6">
+        <h2 class="text-xl font-bold mb-4">Create an account</h2>
+        <p>Can't wait to have you join our community! Let's create your account now.</p>
+        <button class="bg-blue-300 hover:bg-blue-200 text-white px-2 py-1 rounded-lg">
+          <a href="{{ url_for('index.create')}}" class="text-white">Let's get you started →</a>
+      </button>
+    </div>
+    <div class="bg-blue-700 rounded-3xl p-6">
+        <h2 class="text-xl font-bold mb-4">Report issues</h2>
+        <p class="text-gray-300">Your feedback is valuable. Let us know if you're experiencing any problems</p>
+        <button class="bg-blue-300 hover:bg-blue-200 text-white px-2 py-1 rounded-lg">
+          <a href="{{ url_for('index.reports')}}" class="text-white">give a feedback→</a>
+      </button>
+    </div>
+</div>
+
 {% endblock %}

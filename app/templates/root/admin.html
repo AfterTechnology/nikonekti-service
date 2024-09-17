@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    nikonekti admin
+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Admin Dashboard</h1>
+
+    <table class="table-auto w-full bg-white shadow-md rounded-lg">
+        <thead>
+            <tr>
+                <th class="px-4 py-2">Name</th>
+                <th class="px-4 py-2">Email</th>
+                <th class="px-4 py-2">Message</th>
+                <th class="px-4 py-2">Status</th>
+                <th class="px-4 py-2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for complaint in complaints %}
+            <tr class="bg-gray-100">
+                <td class="border px-4 py-2">{{ complaint.name }}</td>
+                <td class="border px-4 py-2">{{ complaint.email }}</td>
+                <td class="border px-4 py-2">{{ complaint.message }}</td>
+                <td class="border px-4 py-2">
+                    {% if complaint.resolved %}
+                        <span class="text-green-600 font-bold">Resolved</span>
+                        {% else %}
+                        <span class="text-red-600 font-bold">Pending</span>
+                    {% endif %}
+                </td>
+                <td class="border px-4 py-2">
+                    {% if not complaint.resolved %}
+                    <form action="/resolve/{{ complaint._id }}" method="POST" class="inline">
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Resolve</button>
+                    </form>
+                    {% endif %}
+                    <form action="/delete/{{ complaint._id }}" method="POST" class="inline">
+                        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script src="/static/js/script.js"></script>
+
+
+    
+{% endblock %}
