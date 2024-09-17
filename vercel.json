@@ -3,14 +3,14 @@
     "name": "nikonekti-service-vercel-app",
     "builds": [
       {
-        "src": "app",
+        "src": "app/__init__",
         "use": "@vercel/python"
     }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "app"
+        "dest": "app/__init__"
       }
     ]
   }
