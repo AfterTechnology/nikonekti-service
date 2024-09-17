@@ -5,7 +5,7 @@
       {
         "src": "app/__init__.py",
         "use": "@vercel/python"
-    }
+      }
     ],
     "routes": [
       {
