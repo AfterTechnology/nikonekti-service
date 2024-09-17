@@ -16,3 +16,4 @@ def create_app():
 def get_db():
     client = MongoClient('mongodb://localhost:27017/')
     return client.customer_service_db
+
