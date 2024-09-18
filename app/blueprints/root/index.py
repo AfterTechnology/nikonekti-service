@@ -45,10 +45,22 @@ def reports():
      return render_template(
           template_name
      )
+
+@bp.route('/privacy')
+def privacy():
+    template_name = '/root/privacy.html'
+
+    return render_template(
+        template_name
+    )
+
 # Database Setup
-client = MongoClient('mongodb://localhost:27017/')
-db = client.customer_service_db
-complaints = db.complaints
+from app.database.db import connect
+
+client = connect()
+
+db = client['customer_service_db']
+complaints = db['complaints']
 
 @bp.route('/index')
 def index():

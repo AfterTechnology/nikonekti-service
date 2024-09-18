@@ -84,3 +84,4 @@ accordionItems.forEach(item => {
         content.classList.toggle('hidden');
     });
 });
+

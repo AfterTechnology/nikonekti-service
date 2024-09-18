@@ -4,9 +4,8 @@
         <a href="{{url_for('index.index_root')}}" class="text-white font-bold text-2xl">Nikonekti</a>
         <ul class="flex space-x-4">
           <li><a href="{{url_for('index.index_root')}}" class="text-white hover:text-gray-300">Home</a></li>
-          <li><a href="#" class="text-white hover:text-gray-300">About Us</a></li>
           <li><a href="#" class="text-white hover:text-gray-300">mentor guidebook</a></li>
-          <li><a href="#" class="text-white hover:text-gray-300">privacy policies</a></li>
+          <li><a href="{{ url_for('index.privacy')}}" class="text-white hover:text-gray-300">privacy policies</a></li>
         </ul>
       </div>
     </div>
